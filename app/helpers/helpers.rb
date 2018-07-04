@@ -1,6 +1,5 @@
 class Helpers
   def self.current_user(session)
-    binding.pry
     @current_user = User.find(session[:user_id])
     @current_user
   end
