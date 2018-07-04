@@ -13,7 +13,7 @@ class ApplicationController < Sinatra::Base
   post '/login' do
      @user = User.find(params[:username])
      if @user
-       session[:id] = @user.id
+       session[:user_id] = @user.id
        redirect '/account'
      else
        erb :error
